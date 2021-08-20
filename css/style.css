@@ -27,15 +27,14 @@ body {
 
 .container {
   background: var(--Very-light-grey--);
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  padding: 100px 20px;
 }
 
 .card {
-  max-width: 700px;
+  max-width: 1080px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
@@ -48,6 +47,7 @@ body {
 
 .card .sedans {
   background: var(--Bright-orange--);
+  border-radius: 10px 0 0 10px;
 }
 
 .card .suvs {
@@ -55,6 +55,7 @@ body {
 }
 .card .luxury {
   background: var(--Very-dark-cyan--);
+  border-radius: 0 10px 10px 0;
 }
 
 .card .item img {
@@ -93,4 +94,44 @@ body {
 }
 .card .luxury a {
   color: var(--Very-dark-cyan--);
+}
+
+/* Responsive design */
+
+@media (max-width: 380px) {
+  .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1089px) {
+  .card .sedans {
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card .suvs {
+    border-radius: 0 10px 10px 0;
+  }
+  .card .luxury {
+    background: var(--Very-dark-cyan--);
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+@media (max-width: 389px) {
+  .card {
+    grid-template-columns: calc(1fr - 40px);
+  }
+
+  .card .sedans {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .card .suvs {
+    border-radius: 0 0 0 0;
+  }
+  .card .luxury {
+    background: var(--Very-dark-cyan--);
+    border-radius: 0 0 10px 10px;
+  }
 }
