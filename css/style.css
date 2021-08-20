@@ -1,5 +1,7 @@
 /* Variables */
 :root {
+  --Very-light-grey--: #f2f2f2;
+  --p-color--: #ffffffbf;
   --Bright-orange--: #e38826;
   --Dark-cyan--: #006970;
   --Very-dark-cyan--: #004241;
@@ -19,83 +21,76 @@ html {
 
 body {
   font-family: "Lexend Deca", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
 }
 
-h2 {
-  font-family: "Big Shoulders Display", cursive;
-  color: #fff;
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: var(--margin-b--);
-}
+/* Card */
 
-p {
-  max-width: 250px;
-  color: #fff;
-  margin-bottom: 100px;
-}
-
-a {
-  display: inline-block;
-  width: fit-content;
-  padding: 10px 25px;
-  background: #fff;
-  text-decoration: none;
-  border-radius: 50px;
-}
-
-/* Style element*/
 .container {
+  background: var(--Very-light-grey--);
+  width: 100vw;
   height: 100vh;
-  padding: 50px 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
 .card {
-  max-width: 100%;
+  max-width: 700px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  justify-content: center;
 }
 
-.item {
-  padding: 50px;
+.card .item {
+  padding: 40px 50px;
   display: flex;
   flex-direction: column;
 }
 
-.sedans {
+.card .sedans {
   background: var(--Bright-orange--);
-  border-radius: 10px 0 0 10px;
 }
 
-.suvs {
+.card .suvs {
   background: var(--Dark-cyan--);
 }
-
-.luxury {
+.card .luxury {
   background: var(--Very-dark-cyan--);
-  border-radius: 0 10px 10px 0;
 }
 
-.item img {
+.card .item img {
   width: 50px;
-  margin-bottom: var(--margin-b--);
+  margin-bottom: 30px;
 }
 
-.sedans a {
+.card .item h2 {
+  font-family: "Big Shoulders Display", cursive;
+  margin-bottom: 30px;
+  color: var(--Very-light-grey--);
+  font-size: 25px;
+}
+
+.card .item p {
+  color: var(--p-color--);
+  width: 250px;
+  margin-bottom: 90px;
+  font-size: 15px;
+}
+
+.card .item a {
+  background: var(--Very-light-grey--);
+  display: inline-block;
+  width: fit-content;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.card .sedans a {
   color: var(--Bright-orange--);
 }
-
-.suvs a {
+.card .suvs a {
   color: var(--Dark-cyan--);
 }
-
-.luxury a {
+.card .luxury a {
   color: var(--Very-dark-cyan--);
 }
